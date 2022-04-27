@@ -2,7 +2,7 @@
 name = "payroll-1c"
 version = "0.1"
 description = "Parse 1C Payrolls XML file"
-authors = ["<dimka665@gmail.com>"]
+authors = ["Dmitry Voronin <dimka665@gmail.com>"]
 
 repository = "https://github.com/odoo-ru/payroll-1c"
 license = "MIT"
@@ -23,9 +23,6 @@ ipython = "*"
 pytest = "*"
 pytest-cov = "*"
 pytest-pythonpath = "*"
-[tool.pytest]
-testpaths = "tests"
-norecursedirs = [".*/", "docs/"]
 
 [build-system]
 requires = ["poetry>=0.12"]

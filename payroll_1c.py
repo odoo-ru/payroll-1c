@@ -4,10 +4,17 @@ from xml.etree import ElementTree
 
 
 class Payroll1C:
-    def __init__(self, file_path, check=True):
-        self.tree = ElementTree.parse(file_path)
+    def __init__(self, source=None, *, fromstring=None, check=True):
+        assert bool(source) is not bool(fromstring)
+        if source:
+            if fromstring:
+                raise ValueError('Used source and fromstring arguments together')
+            self.root = ElementTree.parse(source).getroot()
+        elif fromstring:
+            self.root = ElementTree.fromstring(fromstring)
+        else:
+            raise ValueError('Empty source and fromstring arguments')
 
-        self.root = self.tree.getroot()
         assert self.root.tag == 'СчетаПК'
 
         self.payrolls = self.root[0]
