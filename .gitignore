@@ -8,9 +8,15 @@ __pycache__/
 /*.egg-info/
 /.mypy_cache/
 
+# poetry
+/poetry.lock
+
 # pytest
 /.coverage
 /.pytest_cache/
+
+# direnv
+/.envrc
 
 # tox
 /.tox/
