@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "payroll-1c"
-version = "0.1"
+version = "0.2"
 description = "Parse 1C Payrolls XML file"
 authors = ["Dmitry Voronin <dimka665@gmail.com>"]
 
