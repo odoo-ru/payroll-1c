@@ -46,6 +46,9 @@ class Payroll1C:
     def __getitem__(self, item):
         return self.root.get(item)
 
+    def attrs(self):
+        return self.root.attrib
+
     def __iter__(self):
         for employee in self.payrolls:
             employee_dict = {employee_child.tag: employee_child.text for employee_child in employee}

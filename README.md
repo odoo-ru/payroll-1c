@@ -11,6 +11,19 @@ Install
 pip install payroll_1c
 ```
 
+Usage
+-----
+
+```python
+>>> from payroll_1c import Payroll1C
+>>> payroll = Payroll1C('1C-payroll.xml')
+>>> payroll = Payroll1C(fromstring='<СчетаПК>...</СчетаПК>')
+>>> payroll['ДатаФормирования'] == '2022-01-01'
+>>> for employee in payroll:
+...    print(employee['Фамилия'])
+...    print(employee['Сумма'])
+```
+
 Development
 -----------
 We need installed `pyenv` and `pipenv`.
